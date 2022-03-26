@@ -1,5 +1,5 @@
 {
-  "name": "foo",
+  "name": "top",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
@@ -11,8 +11,6 @@
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "foo-child-a": "workspace:^0.0.1",
-    "foo-child-b": "workspace:^0.0.1",
-    "shared-by-all": "workspace:^0.0.1"
+    "foo": "workspace:^0.0.1"
   }
 }

@@ -99,8 +99,12 @@ importers:
 
   packages/foo:
     specifiers:
+      foo-child-a: workspace:^0.0.1
+      foo-child-b: workspace:^0.0.1
       shared-by-all: workspace:^0.0.1
     dependencies:
+      foo-child-a: link:../foo-child-a
+      foo-child-b: link:../foo-child-b
       shared-by-all: link:../shared-by-all
 
   packages/foo-child-a:
@@ -120,6 +124,12 @@ importers:
       shared-by-all: workspace:^0.0.1
     dependencies:
       shared-by-all: 'link:'
+
+  packages/top:
+    specifiers:
+      foo: workspace:^0.0.1
+    dependencies:
+      foo: link:../foo
 
 packages:
 
